@@ -1,0 +1,15 @@
+{
+  "name": "northstar-inventory-sync",
+  "version": "2.0.0",
+  "description": "Northstar Retail Co. live inventory sync service - webhook push model (post-pivot).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run-tests.js"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
