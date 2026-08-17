@@ -1,15 +1,19 @@
 'use strict';
 
 /**
+ * ============================ DEPRECATED =============================
+ * Retired Day 4 when the client killed the polling method with 48 hours'
+ * notice (no extension, no negotiating scope back). Replaced by
+ * src/routes/webhook.js. Not imported or started anywhere in server.js -
+ * this file does not run. Kept only as a record of the original spec; see
+ * the Scope Delta Analysis for what changed and why.
+ * =======================================================================
+ *
  * ORIGINAL SPEC (Day 3): poll the warehouse API every 5 minutes and refresh
  * the stock cache.
- *
- * Superseded on Day 4 - the client killed the polling method with 48 hours'
- * notice. This file is kept for the record (see Scope Delta Analysis) but
- * is no longer imported or started anywhere in server.js.
  */
 
-const cache = require('./cache');
+const cache = require('../src/cache');
 
 const WAREHOUSE_URL = process.env.WAREHOUSE_URL || 'http://localhost:4001/inventory';
 const POLL_INTERVAL_MS = parseInt(process.env.POLL_INTERVAL_MS || String(5 * 60 * 1000), 10);
